@@ -17,7 +17,7 @@ const Onboarding = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <SafeAreaView className="flex-1 justify-between bg-white">
+    <SafeAreaView className="flex-1 bg-white">
       <TouchableOpacity
         onPress={() => {
           router.replace({ pathname: "/(auth)/sign-up" });
@@ -60,7 +60,9 @@ const Onboarding = () => {
           </View>
         ))}
       </Swiper>
-      <CustomButton title="Next" className="w-11/12 mt-10" />
+      <View className="flex items-center mb-5">
+        <CustomButton title="Next" className="w-11/12" />
+      </View>
     </SafeAreaView>
   );
 };
